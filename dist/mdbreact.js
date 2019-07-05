@@ -3576,7 +3576,7 @@ function (_Component) {
       var _ref = [_this.checkFieldValue(a, field), _this.checkFieldValue(b, field)],
           aField = _ref[0],
           bField = _ref[1];
-      return direction === "desc" ? aField < bField : aField > bField;
+          return direction === "desc" ? (aField < bField ? -1 : 1) : (aField > bField ? -1 : 1);
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSort", function (field, sort) {
